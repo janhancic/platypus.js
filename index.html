@@ -23,7 +23,8 @@
 
 		<script>
 		platypus.done ( function ( response ) {
-			eval ( response.match ( /#platypus#([\s\S]*)#platypus#/i )[1] );
+			var js = response.match ( /#platypus#([\s\S]*)#platypus#/i )[1];
+			$( '<script />' ).text ( js ).appendTo ( $( 'body' ) );
 		} );
 		</script>
 	</body>

@@ -7,5 +7,5 @@ h1 {
 }
 
 /*#platypus#
-alert ( 'It works' );
+$( 'body' ).append ( '<img src="http://lorempixel.com/400/200" />' );
 #platypus#*/
