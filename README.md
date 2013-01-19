@@ -21,4 +21,4 @@ The first version (`index.html`) has some potential (once I remove the jQuery co
 Firstly: why not? Secondly: to remove as many requests as possible & make things faster.
 
 ## Platypus?
-Well it's a [funny animal](http://en.wikipedia.org/wiki/Platypus) that's half duck and half beaver (well not actually). And this is project is trying to join two different things into one … so platypus.
+Well it's a [funny animal](http://en.wikipedia.org/wiki/Platypus) that's half duck and half beaver (well not actually). And this project is trying to join two different things into one … so platypus.
