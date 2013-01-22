@@ -12,8 +12,8 @@ The idea is that you hide your JavaScript code inside your CSS, load the CSS fil
 
 - `index.html`: JavaScript is inside a CSS comment `/*#platypus# … #platypus#*/`, the CSS is then loaded with AJAX and inserted into the page. JavaScript is "collected" with a simple regex and again inserted into the page.
 - `index2.html`: JavaScript is inside a `content` CSS attribute under the `#platypus` selector. After the page is loaded the value of the attribute is read and inserted into the page.
-- `index3.html`: same as `index2.html` only that the JavaScript is base64 encoded in the CSS.
-- `index4.html`: same as `index3.html` only that encoded JS code is bigger (whole jQuery + a bit of client code)
+  - `index3.html`: same as `index2.html` only that the JavaScript is base64 encoded in the CSS.
+  - `index4.html`: same as `index3.html` only that encoded JS code is bigger (whole jQuery + a bit of client code)
 
 Although both approaches work (in Chrome at least, haven't tested the others), this really is just a proof of concept at the moment.
 
