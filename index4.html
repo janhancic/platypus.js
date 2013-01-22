@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="en" />
+		<title>platypus.js</title>
+		<link rel="stylesheet" href="simple4.css" type="text/css" />
+	</head>
+	<body>
+		<h1>platypus.js test #4</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor fermentum nisi, sed posuere justo tincidunt vel. Aliquam erat volutpat. Nunc urna lacus, elementum sit amet consequat ac, ullamcorper nec sapien. Phasellus nibh purus, vestibulum id malesuada et, sodales nec tortor. Aenean et diam neque. Sed pellentesque imperdiet neque id malesuada. Sed vel dui id dolor tincidunt dignissim id a nisl. Etiam placerat sollicitudin sem sit amet condimentum. Aenean ullamcorper neque quis eros mollis auctor. Nulla tincidunt lobortis risus at gravida. Fusce eu libero eget massa rhoncus dignissim ut non erat. Sed feugiat interdum condimentum. Integer libero lacus, molestie ut porttitor faucibus, aliquam vitae massa. Nullam pretium, leo eu auctor imperdiet, massa massa suscipit elit, eget rutrum dui arcu id tortor. Vivamus arcu nulla, vulputate ac lacinia vitae, accumsan tristique neque. Donec porttitor velit eget dolor bibendum vulputate.</p>
+		<p><img src="misc/img1.jpeg" /></p>
+		<p>Proin purus ligula, aliquet eget tincidunt at, imperdiet et erat. In non eros dui, nec congue massa. Pellentesque tempus tempus nisi, sit amet euismod eros rutrum dignissim. Phasellus aliquam bibendum lorem sed sagittis. Etiam suscipit, massa ut ultrices blandit, dui metus venenatis magna, nec adipiscing enim augue sed erat. Sed eget sem lorem, non placerat mi. Phasellus dapibus iaculis urna, et dignissim odio sagittis vel. Praesent at nulla sit amet purus imperdiet luctus ac sit amet leo. Suspendisse potenti. Ut tempus elementum cursus. Mauris dui lectus, sagittis ac lacinia vitae, bibendum nec tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas massa orci, rhoncus eu posuere non, molestie luctus nisl.</p>
+
+		<script>
+		e = document.createElement ( 'div' );
+		e.id = 'platypus';
+		document.body.appendChild ( e );
+		styles = document.defaultView.getComputedStyle ( e, null );
+		var js = styles.getPropertyValue ( 'content' ); // w3c
+		//backgroundImage = someElement.currentStyle["background-image"]; //IE
+
+		if ( js[0] === "'" ) {
+			js = js.substr ( 1, js.length - 2 );
+		}
+
+		var s = document.createElement ( 'script' );
+		s.innerHTML = atob ( js );
+		document.body.appendChild ( s );
+		</script>
+	</body>
+</html>
