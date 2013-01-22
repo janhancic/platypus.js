@@ -8,7 +8,7 @@ A proof of concept that you can load both CSS and JavaScript with only one reque
 The idea is that you hide your JavaScript code inside your CSS, load the CSS file, extract the JavaScript code and execute it.
 
 ## Seriously?
-**Yes!** Currently there are two versions:
+**Yes!** Currently there are four versions:
 
 - `index.html`: JavaScript is inside a CSS comment `/*#platypus# … #platypus#*/`, the CSS is then loaded with AJAX and inserted into the page. JavaScript is "collected" with a simple regex and again inserted into the page.
 - `index2.html`: JavaScript is inside a `content` CSS attribute under the `#platypus` selector. After the page is loaded the value of the attribute is read and inserted into the page.
