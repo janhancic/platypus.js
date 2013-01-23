@@ -1,0 +1,11 @@
+body {
+	background-color: blue;
+}
+
+h1 {
+	color: red;
+}
+
+/*#platypus#
+$( 'body' ).append ( '<img src="misc/img2.jpeg" />' );
+#platypus#*/

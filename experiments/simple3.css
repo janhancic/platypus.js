@@ -1,0 +1,13 @@
+#platypus {
+	display: none;
+	content: 'YWxlcnQoImFhIik7';
+	/*alert("aa");*/
+}
+
+body {
+	background-color: blue;
+}
+
+h1 {
+	color: red;
+}

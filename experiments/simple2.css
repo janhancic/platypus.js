@@ -1,0 +1,12 @@
+#platypus {
+	display: none;
+	content: 'alert("aa");';
+}
+
+body {
+	background-color: blue;
+}
+
+h1 {
+	color: red;
+}

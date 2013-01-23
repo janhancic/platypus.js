@@ -1,0 +1,13 @@
+#platypus-1 {
+	display: none;
+	content: 'JCggZnVuY3Rpb24gKCkgew0KCQkJJCggJ2JvZHknICkucHJlcGVuZCAoICc8ZGl2IHN0eWxlPSJjb2xvcjogeWVsbG93OyI+SVwnbSBkeW5hbWljIHRvbyE8L2Rpdj4nICk7DQoJCX0gKTs=';
+	/*
+		$( function () {
+			$( 'body' ).prepend ( '<div style="color: yellow;">I\'m dynamic too!</div>' );
+		} );
+	*/
+}
+
+div:nth-child(2) {
+	background-color: purple;
+}

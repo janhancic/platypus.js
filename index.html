@@ -19,35 +19,37 @@
 				<h1 class="header">Platypus.js</h1>
 				<p class="header">Experimental JavaScript loader.</p>
 				<ul>
-					<li class="download"><a class="buttons" href="https://github.com/janhancic/platypus.js/zipball/master">Download ZIP</a></li>
-					<li class="download"><a class="buttons" href="https://github.com/janhancic/platypus.js/tarball/master">Download TAR</a></li>
 					<li><a class="buttons github" href="https://github.com/janhancic/platypus.js">View On GitHub</a></li>
 				</ul>
-				<p class="header">This project is maintained by <a class="header name" href="https://github.com/janhancic">janhancic</a></p>
+				<p class="header" id="author">
+					<span>Brought to you by <a class="header name" href="http://hancic.info">Jan Hančič</a></span>
+					<a href="http://hancic.info"><img src="images/jan-hancic.jpg" alt="Jan Hančič" title="Jan Hančič" /></a>
+				</p>
 			</header>
 			<section>
 				<h1>platypus.js</h1>
-				<p>Experimental JavaScript loader.</p>
+				<p>For now platypus.js is just a collection of experiments that I created in order to determine if it is possible to load CSS &amp; JavaScript with one request.</p>
 
-				<h2>What is this?</h2>
-				<p>For now only a proof of concept that you can load both CSS and JavaScript with only one request.</p>
-				<p>The idea is that you hide your JavaScript code inside your CSS, load the CSS file, extract the JavaScript code and execute it.</p>
+				<p>I have created several proof of concepts that prove that it is indeed possible to do so. The general idea is to hide JavaScript code inside a CSS file, and extract it after the browser downloads the CSS file. This results in only one request instead of two.</p>
 
-				<h2>Seriously?</h2>
-				<p><strong>Yes!</strong> Look into <code>experiments</code> folder too see the examples, also read <code>experiments/README.md</code> for details.</p>
+				<h2>Details</h2>
+				<p>More details can be found in the GitHub repository <a href="https://github.com/janhancic/platypus.js">here</a>. If this proves to be a viable way to load JavaScript I will create a generic solution and post the details here.</p>
 
-				<h2>Why?</h2>
-				<p>Firstly: why not? Secondly: to remove as many requests as possible &amp; make things faster.</p>
+				<h2>Demos / proof of concept</h2>
+				<p>You can see the demos in the <a href="https://github.com/janhancic/platypus.js/tree/master/experiments">experiments</a> folder or you can view them live bellow:</p>
+				<ul>
+					<li><a href="experiments/index.html">demo #1</a> - original concept, loads CSS with AJAX and reads JS from a CSS comment</li>
+					<li><a href="experiments/index2.html">demo #2</a> - to avoid FOUC, I put the JS code inside a <code>content</code> property in CSS, load the CSS normally and finally read the JS from there</li>
+					<li><a href="experiments/index3.html">demo #3</a> - same as #2 but the JS is base64 encoded to avoid issues with quotes</li>
+					<li><a href="experiments/index4.html">demo #4</a> - same as #3 but with whole jQuery</li>
+					<li><a href="experiments/index5.html">demo #5</a> - same as #4 but can load JS code from multiple CSS files</li>
+					<li><a href="experiments/index5_big.html">demo #5.1</a> - same as #5 but has more HTML, CSS &amp; JS (it's a bootstrap theme demo page)</li>
+				</ul>
 
-				<h2>Now what?</h2>
-				<p>So far I have proven that this new technique works. Now I need to determine which version is better, pack the code into something more generic and make it work on different browsers (I've only tested in Chrome for now). And before that I should probably run some benchmarks to determine if this is really faster than the "traditional" way of including CSS&amp;JS files.</p>
-
-				<h2>Platypus?</h2>
-				<p>Well it's a <a href="http://en.wikipedia.org/wiki/Platypus">funny animal</a> that's half duck and half beaver (well not actually). And this project is trying to join two different things into one … so platypus.</p>
+				<footer>
+					<p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+				</footer>
 			</section>
-			<footer>
-				<p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-			</footer>
 		</div>
 
 		<!--[if !IE]><script>fixScale(document);</script><![endif]-->
