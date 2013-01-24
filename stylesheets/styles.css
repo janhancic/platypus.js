@@ -288,6 +288,15 @@ header li:hover {
   background: linear-gradient(top, #C3001D 0%,#950119 100%);
 }
 
+header li:last-child, header li:last-child:hover {
+  background: none;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-left: 0;
+}
+
 a.buttons {
 	-webkit-font-smoothing: antialiased;
 	background: url(../images/arrow-down.png) no-repeat;
