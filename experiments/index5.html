@@ -30,7 +30,7 @@
 
 				dummyDiv.parentNode.removeChild ( dummyDiv );
 
-				if ( js[0] === "'" ) {
+				if ( js[0] === "'" || js[0] === '"' ) {
 					js = js.substr ( 1, js.length - 2 );
 				}
 

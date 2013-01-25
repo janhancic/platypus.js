@@ -20,7 +20,7 @@
 		var js = styles.getPropertyValue ( 'content' ); // w3c
 		//backgroundImage = someElement.currentStyle["background-image"]; //IE
 
-		if ( js[0] === "'" ) {
+		if ( js[0] === "'" || js[0] === '"' ) {
 			js = js.substr ( 1, js.length - 2 );
 		}
 
