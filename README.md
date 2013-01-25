@@ -28,7 +28,7 @@ Tested against all the experiments:
 - Firefox 18.0.1 (Windows 7) *doesn't work on example 2, but it doesn't matter*
 
 **doesn't work**
-
+- Internet Explorer 9 (Windows 7)
 
 ## Platypus?
 Well it's a [funny animal](http://en.wikipedia.org/wiki/Platypus) that's half duck and half beaver (well not actually). And this project is trying to join two different things into one … so platypus.
