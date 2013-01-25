@@ -20,14 +20,15 @@ So far I have proven that this new technique works. Now I need to determine whic
 Tested against all the experiments:
 
 **works**
-- Chrome 26.0.1386.0 dev (OS X)
+- Chrome 26.0.1386.0 dev (OS X) & Version 24.0.1312.52 m (Windows 7)
 - Safari 6.0.2 (OS X)
 - Dolphin on Android 4.0.3
 - Chrome on Android 4.0.3
 - stock browser on Android 4.0.3
+- Firefox 18.0.1 (Windows 7) *doesn't work on example 2, but it doesn't matter*
 
 **doesn't work**
-- Firefox 18.0 (OS X)
+
 
 ## Platypus?
 Well it's a [funny animal](http://en.wikipedia.org/wiki/Platypus) that's half duck and half beaver (well not actually). And this project is trying to join two different things into one … so platypus.
