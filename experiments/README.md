@@ -11,3 +11,6 @@ Currently there are five versions:
 Although both approaches work (in Chrome at least, haven't tested the others), this really is just a proof of concept at the moment.
 
 The first version (`index.html`) has some potential (once I remove the jQuery code), as you could use any JS code you would want. The second version has some problems with quotes and is probably to limited for any actual code. The third version uses the technique from `index2.html` but uses base64 encoded JS.
+
+## Demos
+You can find live demos of the experiments here: [http://janhancic.github.com/platypus.js/](http://janhancic.github.com/platypus.js/).

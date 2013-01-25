@@ -16,6 +16,9 @@ Firstly: why not? Secondly: to remove as many requests as possible & make things
 ## Now what?
 So far I have proven that this new technique works. Now I need to determine which version is better, pack the code into something more generic and make it work on different browsers (I've only tested in Chrome for now). And before that I should probably run some benchmarks to determine if this is really faster than the "traditional" way of including CSS&JS files.
 
+## Demos
+You can find live demos of the experiments here: [http://janhancic.github.com/platypus.js/](http://janhancic.github.com/platypus.js/).
+
 ## Browser support
 Tested against all the experiments:
 
