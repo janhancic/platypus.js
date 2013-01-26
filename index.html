@@ -31,14 +31,16 @@
 			</header>
 			<section>
 				<h1>platypus.js</h1>
-				<p>For now platypus.js is just a collection of experiments that I created in order to determine if it is possible to load CSS &amp; JavaScript with one request.</p>
-
-				<p>I have created several proof of concepts that prove that it is indeed possible to do so. The general idea is to hide JavaScript code inside a CSS file, and extract it after the browser downloads the CSS file. This results in only one request instead of two.</p>
+				<p>Experimental JavaScript loader that loads both CSS and JavaScript from one file resulting in only one request.</p>
+				<p>The idea is that you hide JavaScript code inside a CSS file. This means that the browser only has to load one file (the CSS) and platypus.js then extracts the JavaScript from the CSS file.</p>
+				<p>Check out the <a href="https://github.com/janhancic/platypus.js">platypus.js repository</a> to see the code and read instructions on how to use it.</p>
 
 				<h2>Details</h2>
-				<p>More details can be found in the GitHub repository <a href="https://github.com/janhancic/platypus.js">here</a> and in <a href="http://hancic.info/load-javascript-and-css-with-one-request">this blog post</a>. If this proves to be a viable way to load JavaScript I will create a generic solution and post the details here.</p>
+				<p>More details can be found in the GitHub repository <a href="https://github.com/janhancic/platypus.js">here</a> and in <a href="http://hancic.info/load-javascript-and-css-with-one-request">this blog post</a>.</p>
 
 				<h2>Demos / proof of concept</h2>
+				<p>I have created several proof of concepts that prove that it is indeed possible to do so. The general idea is to hide JavaScript code inside a CSS file, and extract it after the browser downloads the CSS file. This results in only one request instead of two.</p>
+				<p>Note that this proof of concepts are just that, so if you wish to see the actual code that is platypus.js go to the GitHub repo and get it from there. This experiments helped me validate the idea and lead to the current code.</p>
 				<p>You can see the demos in the <a href="https://github.com/janhancic/platypus.js/tree/master/experiments">experiments</a> folder or you can view them live bellow:</p>
 				<ul>
 					<li><a href="experiments/index.html">demo #1</a> - original concept, loads CSS with AJAX and reads JS from a CSS comment</li>
@@ -58,6 +60,7 @@
 						<li>Chrome 26.0.1386.0 dev (OS X) &amp; Version 24.0.1312.52 m (Windows 7)</li>
 						<li>Safari 6.0.2 (OS X)</li>
 						<li>Firefox 18.0.1 (OS X &amp; Windows 7) <em>doesn't work on example 2, but it doesn't matter</em></li>
+						<li>Internet Explorer 9 (Windows 7)</li>
 						<li>Opera 12.12 (OS X)</li>
 						<li>Dolphin on Android 4.0.3</li>
 						<li>Chrome on Android 4.0.3</li>
@@ -68,7 +71,8 @@
 				<p>
 					<strong>doesn't work</strong>
 					<ul>
-						<li>Internet Explorer 9 (Windows 7)</li>
+						<li>Internet Explorer 9 in IE8 compatibility mode (Windows 7)</li>
+						<li>Internet Explorer 8 and bellow</li>
 					</ul>
 				</p>
 
