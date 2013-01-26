@@ -16,7 +16,7 @@ The CSS file must include a `#platypus-0` selector, with a `content` attribute t
 ```css
 #platypus-0 {
   display: none;
-	content: 'base64 encoded JavaScript code';
+  content: 'base64 encoded JavaScript code';
 }
 
 /*
