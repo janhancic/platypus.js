@@ -1,0 +1,19 @@
+#platypus-0 {
+	display: none;
+	content: 'dmFyIGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50ICggJ3AnICk7DQplLmlubmVySFRNTCA9ICJJJ20gZnJvbSBKYXZhU2NyaXB0IHRoYXQncyBpbnNpZGUgcGxhdHlwdXNfbWFpbi5jc3MhIjsNCmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQgKCBlICk7';
+	/*
+	The above base64 encoded string contains the following JS code. This is here just for demonstration purposes, you don't need to put the code into a comment.
+	var e = document.createElement ( 'p' );
+	e.innerHTML = "I'm from JavaScript that's inside platypus_main.css!";
+	document.body.appendChild ( e );
+	*/
+}
+
+body {
+	background-color: #fff;
+}
+
+h1 {
+	background-color: black;
+	color: white;
+}
