@@ -8,7 +8,7 @@
  *
  * Date: 2013-01-26
  */
-(function ( document ) {
+var platypus = (function ( platypus, window, document ) {
 	'use strict';
 
 	var linkTags = document.querySelectorAll ( 'link[rel="stylesheet"]' );
@@ -18,26 +18,42 @@
 		dummyElement.id = 'platypus-' + i;
 		document.body.appendChild ( dummyElement );
 
-		// get 'content' attribute value
-		var styles = document.defaultView.getComputedStyle ( dummyElement, null );
-		var js = styles.getPropertyValue ( 'content' );
+		// get 'background-image' attribute's value
+		var js;
+		if ( dummyElement.currentStyle ) {
+			// IE
+			js = dummyElement.currentStyle['backgroundImage'];
+		} else if ( window.getComputedStyle ) {
+			// all other
+			js = document.defaultView.getComputedStyle ( dummyElement, null ).getPropertyValue ( 'background-image' );
+		}
 
 		// remove element
 		dummyElement.parentNode.removeChild ( dummyElement );
-
-		if ( js !== '' ) {
-			// some browsers put single and some dobule quotes when they return the data
-			if ( js[0] === "'" || js[0] === '"' ) {
-				js = js.substr ( 1, js.length - 2 );
+		if ( js !== '' && js !== 'none' ) {
+			// not all browsers return the value the same
+			if ( js[4] === '"' ) {
+				// url("data:text/js;base64,JSCODE") firefox, ie, ...
+				js = js.substring ( 25, js.length - 2 );
+			} else {
+				// url(data:text/js;base64,JSCODE) chrome, ...
+				js = js.substring ( 24, js.length - 1 );
 			}
 
 			var scriptTag = document.createElement ( 'script' );
 			try {
 				// base64 decode
-				scriptTag.innerHTML = atob ( js );
+				if ( window.atob ) {
+					scriptTag.innerHTML = atob ( js );
+				} else {
+					scriptTag.innerHTML = platypus.base64Decode ( js );
+				}
+
 				document.body.appendChild ( scriptTag );
 			} catch ( e ) {
 			}
 		}
 	};
-} ( document ) );
+
+	return platypus;
+} ( platypus || {}, window, document ) );

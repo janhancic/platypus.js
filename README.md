@@ -11,12 +11,12 @@ You include CSS in your HTML as you would normally do in the `head`:
 ```html
 <link rel="stylesheet" href="styles.css" type="text/css" />
 ```
-The CSS file must include a `#platypus-0` selector, with a `content` attribute that contains, as it's value, a base64 encoded JavaScript code:
+The CSS file must include a `#platypus-0` selector, with a `background-image` attribute that contains, as it's value, a base64 encoded JavaScript code:
 
 ```css
 #platypus-0 {
   display: none;
-  content: 'base64 encoded JavaScript code';
+  background-image: url(data:text/js;base64,base64 encoded JavaScript code);
 }
 
 /*
@@ -24,9 +24,20 @@ any other styles you have
 */
 ```
 
-Then right before the `</body>` you put platypus.js code. I recommend that you put it inline and that you use a minified version.
+Then right before the `</body>` you put platypus.js code:
+
+```html
+<!--[if IE]>
+<script src="platypus_ie.js"></script>
+<![endif]-->
+<script src="platypus.js"></script>
+```
+
+I recommend that you put it inline and that you use a minified version. For IE we have to include on extra file that provides base64 decoding functionality.
 
 That's it, your JS will now be loaded from the CSS file.
+
+*note*: originally `content` attribute was used, but IE can't read from it
 
 ## #platypus-X ?!
 You can have multiple CSS files. This allows you to have one common file for all of your page, and sub-page specific CSS files. Standard practise.
@@ -46,13 +57,15 @@ Tested against all the experiments:
 - Chrome 26.0.1386.0 dev (OS X) & Version 24.0.1312.52 m (Windows 7)
 - Safari 6.0.2 (OS X)
 - Firefox 18.0.1 (OS X & Windows 7) *doesn't work on example 2, but it doesn't matter*
+- Internet Explorer 9 (Windows 7)
 - Opera 12.12 (OS X)
 - Dolphin on Android 4.0.3
 - Chrome on Android 4.0.3
 - stock browser on Android 4.0.3
 
 **doesn't work**
-- Internet Explorer 9 (Windows 7)
+- Internet Explorer 9 in IE8 compatibility mode (Windows 7)
+- Internet Explorer 8 and bellow
 
 ## Now what?
 I now have to fix the code so that it will work on as many browsers as possible. Then I have to create some benchmarks to see if this even makes sense.
