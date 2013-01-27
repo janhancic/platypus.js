@@ -63,6 +63,7 @@ Tested against all the experiments:
 - Chrome on Android 4.0.3
 - stock browser on Android 4.0.3
 - Mobile Safari 6 (iOS 6.0.1 iPad 4)
+- Chrome on iOS 6.0.1 (iPad 4)
 
 **doesn't work**
 - Internet Explorer 9 in IE8 compatibility mode (Windows 7)
