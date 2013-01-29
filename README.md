@@ -20,7 +20,8 @@ The CSS file must include a `#platypus-0` selector, with a `background-image` at
 }
 
 /*
-any other styles you have
+Any other styles you have.
+Your styles can also appear before the #platypus-X selector.
 */
 ```
 
